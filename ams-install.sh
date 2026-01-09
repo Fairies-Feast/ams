@@ -22,14 +22,14 @@ elif command -v apk >/dev/null; then
 
 else
     echo "Unsupported package manager"
-    echo "Please get help at ppi-source.pages.dev."
+    echo "Please get help at amsilla-ams.pages.dev."
     exit 1
 fi
 
 rm ppi-app.py
 unalias ppi
 alias ppi="cd ~ && python3 ppi-app.py"
-curl https://ppi-source.pages.dev/ppi-app.py >> ppi-app.py
+curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install python3.13-venv
 python3 -m venv venv
 source venv/bin/activate
