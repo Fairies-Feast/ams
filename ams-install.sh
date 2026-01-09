@@ -27,19 +27,22 @@ else
     exit 1
 fi
 
-ORIG_USER=${SUDO_USER:-$(whoami)}
+#ORIG_USER=${SUDO_USER:-$(whoami)}
 
-run_user() {
-  sudo -u "$ORIG_USER" "$@"
-}
+#run_user() {
+#  sudo -u "$ORIG_USER" "$@"
+#}
 
 rm ams-app.py
+rm ams-temp.sh
 unalias ams
 #echo "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc";
 #run_user printf "%s\n" "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc"
 #run_user source ~/.bashrc
-sudo -u "$SUDO_USER" bash -l -c "printf \"%s\n\" \"alias ams='cd ~ && python3 ams-app.py'\" >> \"$HOME/.bashrc\""
-sudo -u "$SUDO_USER" bash -l -c "source ~/.bashrc"
+echo "echo \"alias ams='cd ~ && python3 ams-app.py'\" >> \"$HOME/.bashrc\";\n" >> ams-temp.sh
+echo "source ~/.bashrc\n" >> ams-temp.sh
+bash ams-temp.sh
+rm ams-temp.sh
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install python3.13-venv
 python3 -m venv venv
