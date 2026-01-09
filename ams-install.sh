@@ -26,13 +26,13 @@ else
     exit 1
 fi
 
-rm ppi-app.py
-unalias ppi
-alias ppi="cd ~ && python3 ppi-app.py"
+rm ams-app.py
+unalias ams
+alias ams="cd ~ && python3 ams-app.py"
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install python3.13-venv
 python3 -m venv venv
 source venv/bin/activate
 pip install requests
 clear
-python ppi-app.py
+python ams-app.py
