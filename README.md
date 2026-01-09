@@ -1,8 +1,11 @@
-# PPI
-Private Program Installer
+# AMS
+AMS is the official way to install .ams files.
 
-## Why PPI?
-PPI will soon support: .exe, .tar.*, .tar, .deb, .rpm, .appimage.
+## Why AMS?
+AMS works across all major operating systems:
+- Windows
+- MacOS
+- Linux
 
 ## Installing on Linux & MacOS
 1. Download the file `ppi-install.sh` ([click here to download](https://ppi-source.pages.dev/ppi-install.sh))
