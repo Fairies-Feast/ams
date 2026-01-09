@@ -28,7 +28,8 @@ fi
 
 rm ams-app.py
 unalias ams
-echo "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc";
+#echo "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc";
+printf "%s\n" "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc"
 source ~/.bashrc
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install python3.13-venv
