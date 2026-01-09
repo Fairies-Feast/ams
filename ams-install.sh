@@ -35,4 +35,4 @@ python3 -m venv venv
 source venv/bin/activate
 pip install requests
 clear
-python ams-app.py
+echo "Installation is now complete. To open AMS, type 'ams' into the terminal."
