@@ -38,5 +38,6 @@ apt install python3.13-venv
 python3 -m venv venv
 source venv/bin/activate
 pip install requests
+read
 clear
 echo "Installation is now complete. To open AMS, type 'ams' into the terminal."
