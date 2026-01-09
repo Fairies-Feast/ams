@@ -1,10 +1,8 @@
-echo "Welcome to the PPI installer!"
-echo "This software is provided As Is. We are not responsible for any malfunction or problem caused by this software"
-echo "WARNING! PPI will be installed in the ~ folder."
-echo "When you are ready to continue, press ENTER."
+echo "Welcome to the AMS installer for Linux!"
+echo "This will install AMS in your home directory at ~"
+echo "Press Enter to install AMS."
 read
 clear
-echo "This tool will attempt to install Python, if not already installed."
 cd ~
 if command -v apt >/dev/null; then
     apt update
@@ -24,7 +22,7 @@ elif command -v apk >/dev/null; then
 
 else
     echo "Unsupported package manager"
-    echo "Try using Ubuntu."
+    echo "Please get help at ppi-source.pages.dev."
     exit 1
 fi
 
