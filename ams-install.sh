@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "Welcome to the AMS installer for Linux!"
 echo "This will install AMS in your home directory at ~"
 echo "Press Enter to install AMS."
@@ -35,8 +36,10 @@ run_user() {
 rm ams-app.py
 unalias ams
 #echo "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc";
-run_user printf "%s\n" "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc"
-run_user source ~/.bashrc
+#run_user printf "%s\n" "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc"
+#run_user source ~/.bashrc
+sudo -u "$SUDO_USER" bash -l -c "printf \"%s\n\" \"alias ams='cd ~ && python3 ams-app.py'\" >> \"$HOME/.bashrc\""
+sudo -u "$SUDO_USER" bash -l -c "source ~/.bashrc"
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install python3.13-venv
 python3 -m venv venv
