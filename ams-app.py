@@ -1,7 +1,15 @@
 import sys
+import tkinter
 
-command = " ".join(sys.argv[1:])
-if command == "" or command == "help":
-  print("ppi help > Help\nppi run [file] > Run an exe, tar, etc file")
-elif command.startswith("run"):
-  print("Coming, soon!")
+command = sys.argv[1:]
+
+if len(command) >= 1:
+  base = command[0]
+  if base == "help":
+    print("Commands:\nams: starts the application\nams help: shows this message")
+elif len(command) == 0:
+  print("AMS : Starting application...")
+  root = tkinter.Tk()
+  root.mainloop()
+else:
+  print("Try 'ams help'")
