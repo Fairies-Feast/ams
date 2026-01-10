@@ -31,7 +31,7 @@ rm ams-temp.sh
 unalias ams
 
 curl https://amsilla-ams.pages.dev/ams-temp.sh >> ams-temp.sh
-bash ams-temp.sh
+sudo -u "$SUDO_USER" bash ams-temp.sh
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 rm ams-temp.sh
 apt install python3.13-venv
