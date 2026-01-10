@@ -30,10 +30,8 @@ rm ams-app.py
 rm ams-temp.sh
 unalias ams
 
+cd ~
 curl https://amsilla-ams.pages.dev/ams-temp.sh >> ams-temp.sh
-cat ams-temp.sh
-ls
-pwd
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install -y python3.13-venv
 python3 -m venv venv
