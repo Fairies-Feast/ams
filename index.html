@@ -27,14 +27,14 @@
       <summary>BASH & Linux</summary>
       <details>
         <summary>Autoinstall script</summary>
-        <p>1. Download <a href="ams-install.sh">ams-install.sh</a><br>2. Run "sudo bash ams-install.sh" in the terminal.<br>3. If the installation fails, see other options.<br>4. You are done! To uninstall, delete the following files from your computer: ams-app.py, ams-install.sh, ams-temp.sh. Some of them may have been automatically deleted by AMS. Then, run the command <code>nano ~/.bashrc</code> and delete the line/lines at the bottom that say: <code>alias ams='cd ~ && python3 ams-app.py'</code> </p>
+        <p>1. Download <a href="ams-install.sh">ams-install.sh</a><br>2. Run "sudo bash ams-install.sh" in the terminal.<br>3. If the installation fails, see other options.<br>4. You are done! The fast way to uninstall: type "ams uninstall" in the terminal. If that does not work, delete the following files from your computer: ams-app.py, ams-install.sh, ams-temp.sh. Some of them may have been automatically deleted by AMS. Then, run the command <code>nano ~/.bashrc</code> and delete the line/lines at the bottom that say: <code>alias ams='cd ~ && python3 ams-app.py'</code> </p>
       </details>
       <details>
         <summary>BASH Command Line</summary>
         <p>1. Install Python and CURL</p>
         <p>2. Download <a href="ams-app.py">ams-app.py</a>. Save it to your home folder. It will not work if it is in your Downloads folder.</p>
         <p>3. Run these two lines of code in the terminal: <br><code>printf "%s\n" "alias ams='cd ~ && python3 ams-app.py'" >> "$HOME/.bashrc"<br>source "$HOME/.bashrc"</code></p>
-        <p>4. You are done! To uninstall, delete ams-app.py. Then, remove this: <code>alias ams='cd ~ && python3 ams-app.py'</code> from the bottom of "/.bashrc" (you can type in "nano ~/.bashrc" in the terminal to edit the file)</p>
+        <p>4. You are done! The fast way to uninstall: type "ams uninstall" in the terminal. If that doesn't work, delete ams-app.py. Then, remove this: <code>alias ams='cd ~ && python3 ams-app.py'</code> from the bottom of "/.bashrc" (you can type in "nano ~/.bashrc" in the terminal to edit the file)</p>
       </details>
       <p>Uninstalling requires a full restart.</p>
     </details>
