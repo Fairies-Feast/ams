@@ -4,7 +4,7 @@ echo "This will install AMS in your home directory at ~"
 echo "Press Enter to install AMS."
 read
 clear
-cd ~
+cd "$(eval echo "~$SUDO_USER")"
 if command -v apt >/dev/null; then
     apt update
     apt install -y python3 curl
@@ -30,7 +30,6 @@ rm ams-app.py
 rm ams-temp.sh
 unalias ams
 
-cd ~
 curl https://amsilla-ams.pages.dev/ams-temp.sh >> ams-temp.sh
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install -y python3.13-venv
