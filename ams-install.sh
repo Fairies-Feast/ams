@@ -37,5 +37,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install requests
 echo "Installation is almost done. Please copy-paste this command:"
-echo "> cd ~ && bash ams-temp.sh"
+cat ams-temp.sh
 echo "Once you have done that, type 'ams' into the shell to open AMS!"
+
+rm ams-temp.sh
