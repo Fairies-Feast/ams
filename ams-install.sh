@@ -31,12 +31,14 @@ rm ams-temp.sh
 unalias ams
 
 curl https://amsilla-ams.pages.dev/ams-temp.sh >> ams-temp.sh
+cat ams-temp.sh
+ls
+pwd
 curl https://amsilla-ams.pages.dev/ams-app.py >> ams-app.py
 apt install -y python3.13-venv
 python3 -m venv venv
 source venv/bin/activate
 pip install requests
-clear
 echo "Installation is almost done. Please copy-paste this command:"
 echo "> cd ~ && bash ams-temp.sh"
 echo "Once you have done that, type 'ams' into the shell to open AMS!"
