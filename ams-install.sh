@@ -7,19 +7,19 @@ clear
 cd "$(eval echo "~$SUDO_USER")"
 if command -v apt >/dev/null; then
     apt update
-    apt install -y python3 curl
+    apt install -y python3 curl python3-pip
 
 elif command -v dnf >/dev/null; then
-    dnf install -y python3 curl
+    dnf install -y python3 curl python3-pip
 
 elif command -v pacman >/dev/null; then
-    pacman -Sy --noconfirm python curl
+    pacman -Sy --noconfirm python curl python3-pip
 
 elif command -v zypper >/dev/null; then
-    zypper install -y python3 curl
+    zypper install -y python3 curl python3-pip
 
 elif command -v apk >/dev/null; then
-    apk add python3 curl
+    apk add python3 curl python3-pip
 
 else
     echo "Unsupported package manager"
