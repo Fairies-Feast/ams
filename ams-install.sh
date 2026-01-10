@@ -36,9 +36,14 @@ apt install -y python3.13-venv
 python3 -m venv venv
 source venv/bin/activate
 pip install requests
-echo "Installation is almost done. Please copy-paste these commands:\n\n"
+clear
+echo "Installation is almost done. Please copy-paste these commands:"
+echo ""
+echo ""
 cat ams-temp.sh
-echo "\n\nOnce you have done that, type 'ams' into the shell to open AMS!"
+echo ""
+echo ""
+echo "Once you have done that, type 'ams' into the shell to open AMS!"
 rm ams-temp.sh
 echo "Please also remove ams-install.sh file."
 echo "Uninstall instructions: https://amsilla-ams.pages.dev"
