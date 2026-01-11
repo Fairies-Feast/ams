@@ -40,16 +40,20 @@
     </details>
     <details>
       <summary>MacOS</summary>
-      <p>1. In the terminal, run <code>brew install bash</code><br>2. Download <a href="ams-install.sh">ams-install.sh</a><br>3. Run <code>sudo bash ams-install.sh</code> in the terminal.<br>4. If the installation fails, see other options.<br>5. You are done! The fast way to uninstall: type <code>ams uninstall</code> in the terminal. If that does not work, delete the following files from your computer: ams-app.py, ams-install.sh, ams-temp.sh. Some of them may have been automatically deleted by AMS. Then, run the command <code>nano ~/.bashrc</code> and delete the line/lines at the bottom that say: <code>alias ams='cd ~ && python3 ams-app.py'</code> </p>
+      <p>1. Install Homebrew: <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>. Follow the guide to install HomeBrew</p>
+      <p>2. Open a terminal and run <code>brew install bash</code>.</p>
+      <p>3. Install Python and Pip with brew (<code>brew install python && brew install pip && pip install requests</code>)</p>
+      <p>4. Follow the instructions on this page for Bash & Linux Autoinstall script.</p>
+      <p>5. When you run the autoinstall script, it might say "Failed to install dependencies". Press enter because you already installed Python and Pip.</p>
     </details>
     <details>
       <summary>Windows</summary>
-      <p>Sorry, not ready yet.</p>
+      <p>No autoinstall script is ready for Windows yet. Try the options under OTHER OS.</p>
     </details>
     
     <details>
       <summary>Other OS</summary>
-      <p>1. Install/download Python and Pip.<br>2. Download <a href="ams-app.py">ams-app.py</a><br>3. Run <code>ams-app.py</code> every time you want to open AMS.</p>
+      <p>1. Install/download Python and Pip. With pip, install "requests".<br>2. Download <a href="ams-app.py">ams-app.py</a><br>3. Run <code>ams-app.py</code> every time you want to open AMS.</p>
     </details>
   </body>
 </html>
