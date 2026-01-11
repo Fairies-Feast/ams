@@ -24,7 +24,8 @@ elif command -v apk >/dev/null; then
 else
     echo "Unsupported package manager"
     echo "Please get help at amsilla-ams.pages.dev."
-    exit 1
+    echo "If your system can (this includes MacOS), please install: python, pip, curl. Then press enter to continue."
+    read
 fi
 rm ams-app.py
 rm ams-temp.sh
