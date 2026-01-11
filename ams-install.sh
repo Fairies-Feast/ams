@@ -22,9 +22,8 @@ elif command -v apk >/dev/null; then
     apk add python3 curl python3-pip
 
 else
-    echo "Unsupported package manager"
-    echo "Please get help at amsilla-ams.pages.dev."
-    echo "If your system can (this includes MacOS), please install: python, pip, curl. Then press enter to continue."
+    echo "Failed to install dependencies"
+    echo "Please install python3 and pip, then press enter."
     read
 fi
 rm ams-app.py
